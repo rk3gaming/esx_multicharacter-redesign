@@ -1,3 +1,5 @@
+MY DISCORD: https://discord.gg/527wns9QEX
+
 A REDESIGN OF ESX MULTICHARACTER I MADE! 
 
 [Preview](https://imgur.com/a/6jigfWg)
