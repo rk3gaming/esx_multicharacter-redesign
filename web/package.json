@@ -6,11 +6,11 @@
     "@mantine/core": "^7.6.1",
     "@mantine/hooks": "^7.6.1",
     "@tabler/icons-react": "^2.47.0",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.4.2",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21"
+    "typescript": "^5.4.2"
   },
   "scripts": {
     "start": "vite",
@@ -18,7 +18,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.1.6"
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.2.6"
   }
-} 
+}
