@@ -20,12 +20,12 @@ export function CharacterSlot({ character, onPlay, onDelete, onCreate, isSelecte
     const SLOT_WIDTH = 380;
 
     const buttonStyle = {
-        backgroundColor: 'rgba(255, 255, 255, 0.07)',
+        background: 'radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%)',
         border: '1px solid rgba(255, 255, 255, 0.1)',
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
         backdropFilter: 'blur(10px)',
         '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            background: 'radial-gradient(circle at center, #2f2f2f 0%, #1f1f1f 100%)',
             border: '1px solid rgba(255, 255, 255, 0.2)',
             transform: 'translateY(-2px)'
         },
@@ -42,11 +42,11 @@ export function CharacterSlot({ character, onPlay, onDelete, onCreate, isSelecte
     };
 
     const boxStyle = {
-        backgroundColor: '#1a1a1a',
+        background: 'radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%)',
         border: '1px solid rgba(255, 255, 255, 0.1)',
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
-            backgroundColor: '#1f1f1f',
+            background: 'radial-gradient(circle at center, #2f2f2f 0%, #1f1f1f 100%)',
             border: '1px solid rgba(255, 255, 255, 0.15)',
             transform: 'translateY(-2px)'
         }
@@ -74,10 +74,10 @@ export function CharacterSlot({ character, onPlay, onDelete, onCreate, isSelecte
     };
 
     const blueButtonStyle = {
-        backgroundColor: 'rgba(30, 58, 138, 0.7)',
+        background: 'radial-gradient(circle at center, rgba(30, 58, 138, 0.8) 0%, rgba(30, 58, 138, 0.6) 100%)',
         border: '1px solid rgba(37, 99, 235, 0.7)',
         '&:hover': {
-            backgroundColor: 'rgba(29, 78, 216, 0.8)',
+            background: 'radial-gradient(circle at center, rgba(29, 78, 216, 0.9) 0%, rgba(29, 78, 216, 0.7) 100%)',
             border: '1px solid rgba(59, 130, 246, 0.6)',
             transform: 'translateY(-2px)'
         },
@@ -87,10 +87,10 @@ export function CharacterSlot({ character, onPlay, onDelete, onCreate, isSelecte
     };
 
     const deleteButtonStyle = {
-        backgroundColor: 'rgba(127, 29, 29, 0.7)',
+        background: 'radial-gradient(circle at center, rgba(127, 29, 29, 0.8) 0%, rgba(127, 29, 29, 0.6) 100%)',
         border: '1px solid rgba(220, 38, 38, 0.7)',
         '&:hover': {
-            backgroundColor: 'rgba(153, 27, 27, 0.8)',
+            background: 'radial-gradient(circle at center, rgba(153, 27, 27, 0.9) 0%, rgba(153, 27, 27, 0.7) 100%)',
             border: '1px solid rgba(239, 68, 68, 0.6)',
             transform: 'translateY(-2px)'
         },
