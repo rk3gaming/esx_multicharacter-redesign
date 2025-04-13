@@ -9,29 +9,36 @@ export function App() {
         const handleMessage = (event: MessageEvent) => {
             if (event.data.type === 'showUI') {
                 setIsVisible(true);
-                fetch(`https://${GetParentResourceName()}/setFocus`, {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        focus: true
-                    })
-                });
+                setFocus(true);
             } else if (event.data.type === 'hideUI') {
                 setIsVisible(false);
-                fetch(`https://${GetParentResourceName()}/setFocus`, {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        focus: false
-                    })
-                });
+                setFocus(false);
+            }
+        };
+
+        const setFocus = (focus: boolean) => {
+            fetch(`https://${GetParentResourceName()}/setFocus`, {
+                method: 'POST',
+                body: JSON.stringify({ focus })
+            });
+        };
+
+        const handleFocus = () => {
+            // Re-apply focus if UI should be visible
+            if (isVisible) {
+                console.log('[Focus] Window regained focus, restoring NUI focus...');
+                setFocus(true);
             }
         };
 
         window.addEventListener('message', handleMessage);
-        
+        window.addEventListener('focus', handleFocus);
+
         return () => {
             window.removeEventListener('message', handleMessage);
+            window.removeEventListener('focus', handleFocus);
         };
-    }, []);
+    }, [isVisible]); // Track changes to isVisible
 
     return (
         <MantineProvider>
@@ -47,4 +54,4 @@ export function App() {
             </div>
         </MantineProvider>
     );
-} 
+}
